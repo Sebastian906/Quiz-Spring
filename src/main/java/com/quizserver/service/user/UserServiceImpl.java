@@ -31,4 +31,9 @@ public class UserServiceImpl implements UserService {
     public Boolean hasUserWithEmail(String email) {
         return userRepository.findFirstByEmail(email) != null;
     }
+
+    public User createUser(User user) {
+        user.setRole(UserRole.USER);
+        return userRepository.save(user);
+    }
 }
