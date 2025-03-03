@@ -9,6 +9,6 @@ public class TestDetailsDTO {
 
     private TestDTO testDTO;
 
-    private List<QuestionDTO> question;
+    private List<QuestionDTO> questions;
 
 }

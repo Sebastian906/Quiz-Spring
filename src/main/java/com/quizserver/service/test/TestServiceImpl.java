@@ -64,7 +64,7 @@ public class TestServiceImpl implements TestService {
             testDTO.setTime(optionalTest.get().getTime() * optionalTest.get().getQuestions().size());
 
             testDetailsDTO.setTestDTO(testDTO);
-            testDetailsDTO.setQuestion(optionalTest.get().getQuestions().stream().map(Question::getDto).toList());
+            testDetailsDTO.setQuestions(optionalTest.get().getQuestions().stream().map(Question::getDto).toList());
             return testDetailsDTO;
         }
         return testDetailsDTO;
